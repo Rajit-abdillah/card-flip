@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <audio src="./assets/jumpscare-94984.mp3" id="scream"></audio>
+    <div class="card-container">
+      <div class="card-flip" id="flipCard">
+        <div class="card-inner">
+          <div class="card-front" id="cardFront"></div>
+          <div class="card-behind" id="cardBack"></div>
+        </div>
+      </div>
+      <button onclick="flipCard()" id="button">Flip Card</button>
+      <span id="text-span"
+        >
+        <h1>
+          flip the card as much as you can, the card is flipped for:
+          <span id="flipCount">0</span> times
+        </h1></span
+      >
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

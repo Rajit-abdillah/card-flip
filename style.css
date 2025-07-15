@@ -1,0 +1,55 @@
+button{
+  background-color: aquamarine;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10vh;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.card-flip {
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card-front,
+.card-behind {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-image: url(./assets/king.jpg);
+  height: 450px;
+}
+
+.card-behind {
+  background-image: url(./assets/behind.jpg);
+  transform: rotateY(180deg);
+  height: 450px;
+}
+
+.flipped .card-inner {
+  transform: rotateY(180deg);
+}
